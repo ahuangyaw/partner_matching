@@ -85,11 +85,11 @@
 
 ### 软件架构
 
-![image-20230623201717125](doc/images/1.png)
+![image-20230623201717125](partner-frontend/doc/images/1.png)
 
 ### 数据库架构
 
-![image-20230623203721932](doc/images/2.jpg)
+![image-20230623203721932](partner-frontend/doc/images/2.jpg)
 
 ## 后端部署
 
