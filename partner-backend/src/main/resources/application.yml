@@ -1,0 +1,64 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        domain: localhost
+        http-only: false
+
+qiniu:
+  accessKey: j9qYsS5x-wcWi3wf2CwtcV3fbEeu-ghebYUPe9dH
+  secretKey: PqI5F-BPgCVamYKb_L6feoP_h4S_0gh7_Agy6Z-D
+  bucketName: hzt
+  fileDomain: localhost:8080/api  #文件访问域名前缀(可配置自己的域名)
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/partner?serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  redis:
+    host: localhost
+    port: 6379
+  jackson:
+    time-zone: GMT+8
+    date-format: java.text.SimpleDateFormat
+  mail:
+    host: host
+    username: 2839230773@qq.com
+    password: a2611926
+  session:
+    store-type: redis
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: on
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      logic-delete-field: isDelete
+      id-type: auto
+knife4j:
+  enable: true
+  openapi:
+    title: hwang接口文档
+    description: "用户匹配系统"
+    email: 2839230773@qq.com
+    version: v2.0.0
+    concat: huang
+    group:
+      hwang:
+        group-name: hwang
+        api-rule: package
+        api-rule-resources:
+          - asia.huangzhitao
+hwang:
+  img: /img/
+  job: "0 0 0 * * ? *"
+  enable-bloom-filter: false
